@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signature Pad Exercise</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- navbar -->
+  <div class="navbar">
+    <h2>COVID-19 CONTRACT</h2>
+    <p class="navbar-subtitle">Contract - Attestation</p>
+  </div>
+  <!-- body -->
+  <div class="b1">
+    <img class="quixi-logo" src="https://shield-health.s3-us-west-2.amazonaws.com/quixi_logo_text_only.png"
+      alt="Logo" />
+    <h1>
+      By completing this letter, I attest that the answers provided in completing this screening tool and assessment
+      were truthful and complete. I understand the contagious nature of COVID-19 and the risk associated with serious
+      illness in the elderly. I have completed this screening and will inform the facility administrator or supervisor
+      should I experience any symptoms during my shift or visit inside this facility.
+    </h1><br>
+    <h1>
+      As a legal record of completing the COVID-19 screening, I am attesting to the truthfulness and completeness of my
+      answers prior to entry at Woodbridge on <span id="date"></span>.
+    </h1>
+  </div>
+  <br>
+  <div class="b2">
+    <!-- name/color form -->
+    <p class="record-text">Type your full name as a legal record of completing COVID-19 screening:</p>
+    <form id="covid-form" class="covid-form" action="https://www.quixi.com/internship-form" method="POST">
+      <input name="name" required type="text" placeholder="Your name"></input>
+      <select name="color" required>
+        <option>Pick a color</option>
+        <option value="Red">Red</option>
+        <option value="Green">Green</option>
+        <option value="Blue">Blue</option>
+      </select>
+    </form>
+    <br>
+    <!-- signature pad -->
+    <p class="sign-here">Please sign below:</p>
+    <canvas id="signature-pad" class="signature-pad"></canvas>
+    <br>
+    <button id="clear-button">Clear</button>
+    <button class="submit-button" type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/signature_pad@2.3.2/dist/signature_pad.min.js"></script>
+<script src="index.js"></script>
+</html>
