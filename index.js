@@ -1,25 +1,25 @@
-// $("#covid-form").on('submit', function(event) {
-//   event.preventDefault()
-//   // 1. AJAX request (submitting the signature)
-//   $.ajax({
-//     type: "POST",
-//     url: "https://www.quixi.com/signature_data",
-//     data: {
-//       image_data: image_url
-//     }
-//   })
-//   .then(function(res) {
-//     // 2. Submitting the name/color form after signature was complete
-//     return $.ajax({
-//       type: "POST",
-//       url: "https://www.quixi.com/internship-form",
-//       data: {
-//         name: name,
-//         color: color
-//       }
-//     })
-//   })
-// })
+$("#covid-form").on('submit', function(event) {
+  event.preventDefault()
+  // 1. AJAX request (submitting the signature)
+  $.ajax({
+    type: "POST",
+    url: "https://www.quixi.com/signature_data",
+    data: {
+      image_data: image_url
+    }
+  })
+  .then(function(res) {
+    // 2. Submitting the name/color form after signature was complete
+    return $.ajax({
+      type: "POST",
+      url: "https://www.quixi.com/internship-form",
+      data: {
+        name: name,
+        color: color
+      }
+    })
+  })
+})
 
 // will show current date
 var d = new Date();
